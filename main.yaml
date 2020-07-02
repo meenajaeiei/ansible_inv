@@ -1,0 +1,10 @@
+- hosts: all             
+  tasks:                 
+  - name: test           
+    become: true         
+    template:            
+      src: ./x.j2        
+      dest: /home/ubuntu 
+      owner: ubuntu      
+      group: ubuntu      
+      mode: '0644'       
